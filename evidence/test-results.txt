@@ -1,0 +1,67 @@
+WARNING: File `gltest.config.yaml` not found in the current directory, using default config, create a `gltest.config.yaml` file to manage multiple networks
+INFO: Clearing artifacts directory: artifacts
+INFO: Using the following configuration:
+INFO:   RPC URL: http://127.0.0.1:4000/api
+INFO:   Selected Network: localnet
+INFO:   Available networks: ['localnet', 'studionet', 'testnet_asimov', 'testnet_bradbury']
+INFO:   Selected chain type: localnet
+INFO:   Available chains: localnet, studionet, testnet_asimov, testnet_bradbury
+INFO:   Contracts directory: contracts
+INFO:   Artifacts directory: artifacts
+INFO:   Environment: .env
+INFO:   Default wait interval: 3000 ms
+INFO:   Default wait retries: 50
+INFO:   Leader only mode: False
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-9.2.0, pluggy-1.7.0 -- C:\DEV Panda\EventVerdict\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\DEV Panda\EventVerdict
+plugins: genlayer-test-0.29.2
+collecting ... collected 44 items
+
+tests/test_event_verdict.py::test_yes_resolution PASSED                  [  2%]
+tests/test_event_verdict.py::test_no_resolution PASSED                   [  4%]
+tests/test_event_verdict.py::test_too_early_resolution PASSED            [  6%]
+tests/test_event_verdict.py::test_too_early_then_resolved PASSED         [  9%]
+tests/test_event_verdict.py::test_inconclusive_insufficient_sources PASSED [ 11%]
+tests/test_event_verdict.py::test_inconclusive_one_source PASSED         [ 13%]
+tests/test_event_verdict.py::test_exactly_two_sources_allows_yes PASSED  [ 15%]
+tests/test_event_verdict.py::test_contradictory_sources_inconclusive PASSED [ 18%]
+tests/test_event_verdict.py::test_yes_requires_readable_source_both_sides PASSED [ 20%]
+tests/test_event_verdict.py::test_all_sources_fail_no_crash PASSED       [ 22%]
+tests/test_event_verdict.py::test_malformed_llm_json PASSED              [ 25%]
+tests/test_event_verdict.py::test_invalid_resolution_normalized PASSED   [ 27%]
+tests/test_event_verdict.py::test_too_early_confidence_capped PASSED     [ 29%]
+tests/test_event_verdict.py::test_inconclusive_confidence_reduced PASSED [ 31%]
+tests/test_event_verdict.py::test_evidence_summary_non_list PASSED       [ 34%]
+tests/test_event_verdict.py::test_create_validation[-2026-FINANCE-urls0-event_description cannot be empty] PASSED [ 36%]
+tests/test_event_verdict.py::test_create_validation[X-2026-WEATHER-urls1-Invalid category] PASSED [ 38%]
+tests/test_event_verdict.py::test_create_validation[X-2026-FINANCE-urls2-At least 3 source URLs required] PASSED [ 40%]
+tests/test_event_verdict.py::test_create_validation[X-2026-FINANCE-urls3-Maximum 5 source URLs] PASSED [ 43%]
+tests/test_event_verdict.py::test_create_validation[X-2026-FINANCE-urls4-Duplicate] PASSED [ 45%]
+tests/test_event_verdict.py::test_create_validation[X-2026-FINANCE-urls5-Invalid URL] PASSED [ 47%]
+tests/test_event_verdict.py::test_create_validation[description6-2026-FINANCE-urls6-exceeds 500] PASSED [ 50%]
+tests/test_event_verdict.py::test_create_validation[X--FINANCE-urls7-resolution_deadline cannot be empty] PASSED [ 52%]
+tests/test_event_verdict.py::test_create_validation[X-DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD-FINANCE-urls8-exceeds 50] PASSED [ 54%]
+tests/test_event_verdict.py::test_resolve_already_resolved PASSED        [ 56%]
+tests/test_event_verdict.py::test_resolve_unresolvable PASSED            [ 59%]
+tests/test_event_verdict.py::test_get_resolution_fresh_pending PASSED    [ 61%]
+tests/test_event_verdict.py::test_get_resolution_after_too_early PASSED  [ 63%]
+tests/test_event_verdict.py::test_list_queries_filter PASSED             [ 65%]
+tests/test_event_verdict.py::test_invalidate_owner_only PASSED           [ 68%]
+tests/test_event_verdict.py::test_all_categories_valid PASSED            [ 70%]
+tests/test_event_verdict.py::test_missing_query[get_query] PASSED        [ 72%]
+tests/test_event_verdict.py::test_missing_query[get_resolution] PASSED   [ 75%]
+tests/test_event_verdict.py::test_missing_query[resolve_query] PASSED    [ 77%]
+tests/test_event_verdict.py::test_missing_query[invalidate_query] PASSED [ 79%]
+tests/test_event_verdict.py::test_validator_disagrees[NO-98] PASSED      [ 81%]
+tests/test_event_verdict.py::test_validator_disagrees[YES-60] PASSED     [ 84%]
+tests/test_event_verdict.py::test_fabricated_source_count_rejected PASSED [ 86%]
+tests/test_event_verdict.py::test_illustrative_apollo_example PASSED     [ 88%]
+tests/test_event_verdict.py::test_llm_failure_safe_fallback PASSED       [ 90%]
+tests/test_event_verdict.py::test_each_different_decision_rejected[NO] PASSED [ 93%]
+tests/test_event_verdict.py::test_each_different_decision_rejected[TOO_EARLY] PASSED [ 95%]
+tests/test_event_verdict.py::test_each_different_decision_rejected[INCONCLUSIVE] PASSED [ 97%]
+tests/test_event_verdict.py::test_same_meaning_different_words_accepted PASSED [100%]
+
+============================= 44 passed in 3.71s ==============================

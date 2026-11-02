@@ -1,0 +1,15 @@
+{
+  "contract_file": "contracts/event_verdict.py",
+  "sha256": "87e9f6b466bbd6048eea46f38e045328d9f29e03b92924354046e2915a8afb7a",
+  "non_ascii_lines": 0,
+  "line_1": "# v0.2.16",
+  "line_3": "from genlayer import *",
+  "class": "Contract",
+  "persisted_numbers": "bigint",
+  "storage_reads_in_nondet_closures": false,
+  "test_result": "44 passed in 3.71s",
+  "test_command": ".venv\\Scripts\\gltest.exe tests/ -v",
+  "python": "3.12.10",
+  "pytest": "9.2.0",
+  "genlayer-test": "0.29.2"
+}

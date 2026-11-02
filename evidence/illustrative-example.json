@@ -1,0 +1,22 @@
+{
+  "label": "Illustrative example: mocked direct-mode execution; not a live Studionet result",
+  "create_query": {
+    "event_description": "Did Apollo 11 land humans on the Moon by July 21, 1969?",
+    "resolution_deadline": "1969-07-21",
+    "category": "SCIENCE",
+    "source_urls": [
+      "https://www.nasa.gov/mission/apollo-11/",
+      "https://en.wikipedia.org/wiki/Apollo_11",
+      "https://www.britannica.com/topic/Apollo-11"
+    ]
+  },
+  "resolve_query": {
+    "query_id": "1"
+  },
+  "expected_verdict": {
+    "resolution": "YES",
+    "confidence": 98,
+    "sources_readable": 3,
+    "status": "RESOLVED"
+  }
+}

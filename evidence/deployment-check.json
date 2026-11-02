@@ -1,0 +1,12 @@
+{
+  "network": "studionet",
+  "rpc": "https://studio.genlayer.com/api",
+  "address": "0x350DC22Bcd5979C5aFf042A4aBA8D300e1381211",
+  "checked_at": "2026-11-02T06:31:05.645654+00:00",
+  "chain_id": {
+    "request_error": "HTTP Error 403: Forbidden"
+  },
+  "deployed_schema": {
+    "request_error": "HTTP Error 403: Forbidden"
+  }
+}
